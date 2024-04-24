@@ -1,10 +1,11 @@
 import { getCurrentPath } from '@/utils/helpers';
 const __dirname = getCurrentPath(import.meta.url);
 
-import got from '@/utils/got';
 import { load } from 'cheerio';
 import { parseDate } from '@/utils/parse-date';
 import { art } from '@/utils/render';
+import cache from '@/utils/cache';
+import puppeteer from '@/utils/puppeteer';
 import path from 'node:path';
 
 const rootUrl = 'https://www.javlibrary.com';
@@ -12,13 +13,28 @@ const defaultMode = '1';
 const defaultGenre = 'amjq';
 const defaultMaker = 'arlq';
 const defaultLanguage = 'ja';
-const ProcessItems = async (language, currentUrl, tryGet) => {
-    const response = await got({
-        method: 'get',
-        url: currentUrl,
+
+const puppeteerGet = (url, cache) =>
+    cache.tryGet(url, async () => {
+        const browser = await puppeteer();
+        const page = await browser.newPage();
+        await page.setRequestInterception(true);
+        page.on('request', (request) => {
+            request.resourceType() === 'document' ? request.continue() : request.abort();
+        });
+        await page.goto(url, {
+            waitUntil: 'domcontentloaded',
+        });
+        const html = await page.evaluate(() => document.documentElement.innerHTML);
+        browser.close();
+        return html;
     });
 
-    const $ = load(response.data);
+const ProcessItems = async (language, currentUrl, tryGet) => {
+    // use Puppeteer due to cloudflare challenge
+    const html = await puppeteerGet(currentUrl, cache);
+
+    const $ = load(html);
 
     $('.toolbar, .info, .videoinfo').remove();
 
@@ -45,12 +61,10 @@ const ProcessItems = async (language, currentUrl, tryGet) => {
     items = await Promise.all(
         items.map((item) =>
             tryGet(item.url, async () => {
-                const detailResponse = await got({
-                    method: 'get',
-                    url: item.url,
-                });
+                // use Puppeteer due to cloudflare challenge
+                const html = await puppeteerGet(item.url, cache);
 
-                const content = load(detailResponse.data);
+                const content = load(html);
 
                 content('.icn_edit, .btn_videoplayer, a[rel="bookmark"]').remove();
                 content('span').each(function () {
