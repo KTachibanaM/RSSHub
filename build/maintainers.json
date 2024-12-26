@@ -1612,6 +1612,9 @@
   "/curius/links/:name": [
     "Ovler-Young"
   ],
+  "/cursor/changelog": [
+    "p3psi-boo"
+  ],
   "/cw/author/:channel": [
     "TonyRL"
   ],
@@ -1754,6 +1757,9 @@
   "/deepmind/blog": [
     "nczitzk",
     "TonyRL"
+  ],
+  "/deepseek/news": [
+    "1837634311"
   ],
   "/dehenglaw/:language?/:category?": [
     "nczitzk"
@@ -3404,6 +3410,10 @@
   "/huggingface/blog-zh": [
     "zcf0508"
   ],
+  "/huggingface/blog": [
+    "cesaryuan",
+    "zcf0508"
+  ],
   "/huggingface/daily-papers": [
     "zeyugao"
   ],
@@ -3888,7 +3898,16 @@
   "/jinse/timeline/:category?": [
     "nczitzk"
   ],
-  "/jisilu/:category?/:sort?/:day?": [
+  "/jisilu/category/:id": [
+    "nczitzk"
+  ],
+  "/jisilu/explore/:filter?": [
+    "nczitzk"
+  ],
+  "/jisilu/people/:id/:type?": [
+    "nczitzk"
+  ],
+  "/jisilu/topic/:id": [
     "nczitzk"
   ],
   "/jiuyangongshe/community": [
@@ -3933,6 +3952,9 @@
   ],
   "/jpxgmn/weekly": [
     "Urabartin"
+  ],
+  "/jrj/:channelNum": [
+    "p3psi-boo"
   ],
   "/jseea/news/:type?": [
     "schen1024"
@@ -4538,6 +4560,9 @@
   "/mohw/clarification": [
     "nczitzk"
   ],
+  "/moodysmismicrosite/report/:industry?": [
+    "FYLSen"
+  ],
   "/mox/:category?": [
     "nczitzk"
   ],
@@ -4553,6 +4578,9 @@
   ],
   "/mrm/:category?": [
     "TonyRL"
+  ],
+  "/msn/:market/:name/:id": [
+    "KTachibanaM"
   ],
   "/mwm/:category?": [
     "nczitzk"
@@ -5253,8 +5281,11 @@
   "/panewslab/topic/:id": [
     "nczitzk"
   ],
-  "/papers/:category{.+}?": [
+  "/papers/arxiv/:category{.+}?": [
     "nczitzk",
+    "Muyun99"
+  ],
+  "/papers/query/:keyword{.+}?": [
     "Muyun99"
   ],
   "/paradigm/writing": [
@@ -6819,6 +6850,9 @@
   "/thwiki/calendar/:before?/:after?": [
     "aether17"
   ],
+  "/tiddlywiki/releases": [
+    "p3psi-boo"
+  ],
   "/tiktok/user/:user/:iframe?": [
     "TonyRL"
   ],
@@ -7311,6 +7345,9 @@
     "KarasuShin"
   ],
   "/web3caff*": [],
+  "/webcatalog/changelog": [
+    "Tsuyumi25"
+  ],
   "/wechat/announce": [
     "xyqfer"
   ],
@@ -7851,9 +7888,12 @@
   "/zagg/new-arrivals/:query?": [
     "EthanWng97"
   ],
-  "/zaker/:type/:id?": [
+  "/zaker/channel/:id?": [
     "LogicJake",
     "kt286",
+    "TonyRL"
+  ],
+  "/zaker/focusread": [
     "AlexdanerZe",
     "TonyRL"
   ],
