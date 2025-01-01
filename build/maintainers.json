@@ -3554,6 +3554,12 @@
   "/ielts/": [
     "zenxds"
   ],
+  "/ifanr/category/:name": [
+    "donghongfei"
+  ],
+  "/ifanr/index": [
+    "donghongfei"
+  ],
   "/ifeng/feng/:id/:type": [
     "Jamch"
   ],
@@ -4071,6 +4077,9 @@
   ],
   "/konghq/blog-posts": [
     "piglei"
+  ],
+  "/koreaherald/:category{.+}?": [
+    "quiniapiezoelectricity"
   ],
   "/kpmg/insights/:lang?": [
     "LogicJake"
@@ -7561,6 +7570,12 @@
   "/xaut/rsc/:category?": [
     "mocusez",
     "light0926"
+  ],
+  "/xbmu/academic": [
+    "PrinOrange"
+  ],
+  "/xbmu/announcement": [
+    "PrinOrange"
   ],
   "/xbookcn/:label?": [
     "Lyunvy"
