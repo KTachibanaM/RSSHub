@@ -185,6 +185,18 @@
   "/4ksj/:id?": [
     "nczitzk"
   ],
+  "/4kup/category/:category": [
+    "AiraNadih"
+  ],
+  "/4kup/": [
+    "AiraNadih"
+  ],
+  "/4kup/popular/:period": [
+    "AiraNadih"
+  ],
+  "/4kup/tag/:tag": [
+    "AiraNadih"
+  ],
   "/500px/tribe/set/:id": [
     "TonyRL"
   ],
@@ -1565,6 +1577,18 @@
     "marvolo666",
     "yan12125"
   ],
+  "/cosplaytele/category/:category": [
+    "AiraNadih"
+  ],
+  "/cosplaytele/": [
+    "AiraNadih"
+  ],
+  "/cosplaytele/popular/:period": [
+    "AiraNadih"
+  ],
+  "/cosplaytele/tag/:tag": [
+    "AiraNadih"
+  ],
   "/counter-strike/news/:category?/:language?": [
     "nczitzk"
   ],
@@ -2107,8 +2131,9 @@
   "/dykszx/news/:newsType?": [
     "zytomorrow"
   ],
-  "/dytt/": [
-    "junfengP"
+  "/dytt/:category{.+}?": [
+    "junfengP",
+    "nczitzk"
   ],
   "/e-hentai/:what?/:id?/:needTorrents?/:needImages?": [],
   "/eagle/blog/:cate?/:language?": [
@@ -2561,12 +2586,18 @@
   ],
   "/gamme/:domain/:category?": [],
   "/gamme/:domain/tag/:tag": [],
+  "/gcores/articles": [
+    "nczitzk"
+  ],
   "/gcores/category/:category": [
     "MoguCloud",
     "StevenRCE0"
   ],
   "/gcores/collections/:collection": [
     "kudryavka1013"
+  ],
+  "/gcores/news": [
+    "nczitzk"
   ],
   "/gcores/radios/:category?": [
     "eternasuno"
@@ -4172,6 +4203,9 @@
   "/lala/": [
     "cnkmmk"
   ],
+  "/landiannews/": [
+    "nczitzk"
+  ],
   "/lang/live/room/:id": [
     "MittWillson"
   ],
@@ -4777,7 +4811,7 @@
   "/neea/local/:type": [
     "SunShinenny"
   ],
-  "/neea/global/jlpt": [
+  "/neea/jlpt": [
     "nczitzk"
   ],
   "/nenu/sohac/*": [],
@@ -4849,7 +4883,8 @@
   ],
   "/nhk/news/:lang?": [
     "TonyRL",
-    "pseudoyu"
+    "pseudoyu",
+    "cscnk52"
   ],
   "/niaogebiji/cat/:cat": [
     "cKotoriKat"
