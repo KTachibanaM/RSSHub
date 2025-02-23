@@ -12505,6 +12505,102 @@
         "target": "/gcores/gcores/articles"
       },
       {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/categories/:id"
+        ],
+        "target": "/gcores(params,url)=>{const urlObj=new URL(url);const id=params.id;const tab=urlObj.searchParams.get(\"tab\")??void 0;return`/gcores/categories/${id}/${tab?`/${tab}`:\"\"}`}"
+      },
+      {
+        "title": "全部",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/categories/:id"
+        ],
+        "target": "/gcores/gcores/categories/:id"
+      },
+      {
+        "title": "播客",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/categories/:id"
+        ],
+        "target": "/gcores/categories/:id/radios"
+      },
+      {
+        "title": "文章",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/categories/:id"
+        ],
+        "target": "/gcores/categories/:id/articles"
+      },
+      {
+        "title": "资讯",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/categories/:id"
+        ],
+        "target": "/gcores/categories/:id/news"
+      },
+      {
+        "title": "视频",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/categories/:id"
+        ],
+        "target": "/gcores/categories/:id/videos"
+      },
+      {
+        "title": "专题",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/collections/:id"
+        ],
+        "target": "/gcores(params,url)=>{const urlObj=new URL(url);const id=params.id;const tab=urlObj.searchParams.get(\"tab\")??void 0;return`/gcores/collections/${id}/${tab?`/${tab}`:\"\"}`}"
+      },
+      {
+        "title": "全部",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/collections/:id"
+        ],
+        "target": "/gcores/collections/:id"
+      },
+      {
+        "title": "播客",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/collections/:id"
+        ],
+        "target": "/gcores/collections/:id/radios"
+      },
+      {
+        "title": "文章",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/collections/:id"
+        ],
+        "target": "/gcores/collections/:id/articles"
+      },
+      {
+        "title": "资讯",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/collections/:id"
+        ],
+        "target": "/gcores/collections/:id/news"
+      },
+      {
+        "title": "视频",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/collections/:id"
+        ],
+        "target": "/gcores/collections/:id/videos"
+      },
+      {
         "title": "资讯",
         "docs": "https://docs.rsshub.app/routes/game",
         "source": [
@@ -12559,25 +12655,17 @@
           "/tags/:id/originals"
         ],
         "target": "/gcores/gcores/tags/:id/videos"
+      },
+      {
+        "title": "视频",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/videos"
+        ],
+        "target": "/gcores/gcores/videos"
       }
     ],
     ".": [
-      {
-        "title": "分类",
-        "docs": "https://docs.rsshub.app/routes/new-media",
-        "source": [
-          "/:category"
-        ],
-        "target": "/gcores/category/:category"
-      },
-      {
-        "title": "专题文章",
-        "docs": "https://docs.rsshub.app/routes/new-media",
-        "source": [
-          "/collections/:collection"
-        ],
-        "target": "/gcores/collections/:collection"
-      },
       {
         "title": "播客",
         "docs": "https://docs.rsshub.app/routes/new-media",
@@ -16568,6 +16656,42 @@
   },
   "hrbust.edu.cn": {
     "_name": "哈尔滨理工大学",
+    "cs": [
+      {
+        "title": "计算机学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:category/list.htm"
+        ],
+        "target": "/hrbust/cs/:category"
+      },
+      {
+        "title": "计算机学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/hrbust/cs"
+      }
+    ],
+    "gzc": [
+      {
+        "title": "国有资产管理处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:category/list.htm"
+        ],
+        "target": "/hrbust/gzc/:category"
+      },
+      {
+        "title": "国有资产管理处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/hrbust/gzc"
+      }
+    ],
     "jwzx": [
       {
         "title": "教务处",
@@ -16576,6 +16700,24 @@
           "/homepage/index.do"
         ],
         "target": "/hrbust/jwzx"
+      }
+    ],
+    "lib": [
+      {
+        "title": "图书馆",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:category/list.htm"
+        ],
+        "target": "/hrbust/lib/:category"
+      },
+      {
+        "title": "图书馆",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/hrbust/lib"
       }
     ],
     "news": [
@@ -19264,6 +19406,35 @@
       }
     ]
   },
+  "joshwcomeau.com": {
+    "_name": "Josh W Comeau",
+    ".": [
+      {
+        "title": "Articles and Tutorials",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/joshwcomeau/latest"
+      },
+      {
+        "title": "Articles and Tutorials",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/:category"
+        ],
+        "target": "/joshwcomeau/latest/:category"
+      },
+      {
+        "title": "Popular Content",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/joshwcomeau/popular"
+      }
+    ]
+  },
   "jou.edu.cn": {
     "_name": "江苏海洋大学",
     "www": [
@@ -20728,6 +20899,20 @@
           "/Profile/:uid/:handle/Store"
         ],
         "target": "/manyvids/profile/vids/:uid"
+      }
+    ]
+  },
+  "mashiro.best": {
+    "_name": "Mashiro's Baumkuchen",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/",
+          "/:lang/"
+        ],
+        "target": "/mashiro/:lang"
       }
     ]
   },
@@ -25554,6 +25739,19 @@
       }
     ]
   },
+  "okx.com": {
+    "_name": "欧易 OKX",
+    "www": [
+      {
+        "title": "公告",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/zh-hans/help/section/:section"
+        ],
+        "target": "/okx/:section"
+      }
+    ]
+  },
   "olevod.one": {
     "_name": "欧乐影院",
     "www": [
@@ -27534,16 +27732,24 @@
       }
     ]
   },
-  "piokok.com": {
+  "pixwox.com": {
     "_name": "Instagram",
     ".": [
       {
         "title": "User Profile - Picnob",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/profile/:id/*"
+          "/profile/:id"
         ],
         "target": "/picnob/user/:id"
+      },
+      {
+        "title": "User Profile - Picnob",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/profile/:id/tagged"
+        ],
+        "target": "/picnob/user/:id/tagged"
       }
     ]
   },
@@ -30224,7 +30430,7 @@
         "source": [
           "/search"
         ],
-        "target": "/shopify(_params,url)=>{const{searchParams}=new URL(url).searchParams;return searchParams.has(\"q\")?`/shopify/apps/search/${searchParams.get(\"q\")}`:null}"
+        "target": "/shopify(_params,url)=>{const searchParams=new URL(url).searchParams;if(!searchParams.has(\"q\")){return\"\"}return`/shopify/apps/search/${searchParams.get(\"q\")}`}"
       }
     ]
   },
@@ -32714,6 +32920,14 @@
           "/www/lawrules/rule/repeal/rules/index.html"
         ],
         "target": "/szse/rule/repeal/rules"
+      },
+      {
+        "title": "上市公司公告",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/disclosure/listed/notice/index.html"
+        ],
+        "target": "/szse/disclosure/listed/notice"
       }
     ]
   },
@@ -35844,6 +36058,19 @@
           "/i/:id"
         ],
         "target": "/youku/channel/:id"
+      }
+    ]
+  },
+  "youmemark.com": {
+    "_name": "YouMeMark",
+    ".": [
+      {
+        "title": "Bookmarks",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/user/:userid"
+        ],
+        "target": "/youmemark/:userid"
       }
     ]
   },
