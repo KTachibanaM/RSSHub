@@ -10055,8 +10055,7 @@ export default {
       "/news": {
         "path": "/news",
         "categories": [
-          "programming",
-          "popular"
+          "programming"
         ],
         "example": "/anthropic/news",
         "parameters": {},
@@ -10080,7 +10079,8 @@ export default {
       "/research": {
         "path": "/research",
         "categories": [
-          "programming"
+          "programming",
+          "popular"
         ],
         "example": "/anthropic/research",
         "parameters": {},
